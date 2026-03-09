@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://6skntrxkk538"]
+
+[ext_resource type="PackedScene" uid="uid://c2ecy4a0s4bj" path="res://Blender/Game.glb" id="1_iukft"]
+
+[node name="Game" unique_id=1686568724 instance=ExtResource("1_iukft")]
+
+[node name="Arena" type="Node3D" parent="." index="7" unique_id=978294843]
