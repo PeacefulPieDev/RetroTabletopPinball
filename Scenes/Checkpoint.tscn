@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://7y6pxr4jynya"]
+
+[ext_resource type="Script" uid="uid://bufjd1k45feqv" path="res://Scripts/checkpoint.gd" id="1_wp6dl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wp6dl"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rvdls"]
+material = SubResource("StandardMaterial3D_wp6dl")
+top_radius = 0.48
+height = 0.1
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wp6dl"]
+material = SubResource("StandardMaterial3D_wp6dl")
+top_radius = 0.96
+bottom_radius = 1.0
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i3j2t"]
+albedo_color = Color(0, 0, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i3j2t"]
+material = SubResource("StandardMaterial3D_i3j2t")
+top_radius = 0.96
+bottom_radius = 1.0
+height = 0.1
+
+[node name="Node3D" type="Node3D" unique_id=704633063]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_wp6dl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=864565152]
+mesh = SubResource("CylinderMesh_rvdls")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=239141689]
+visible = false
+mesh = SubResource("CylinderMesh_wp6dl")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=564017869]
+visible = false
+mesh = SubResource("CylinderMesh_i3j2t")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=1734336704]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.10064407, 0)
+pixel_size = 0.02
+text = "##"

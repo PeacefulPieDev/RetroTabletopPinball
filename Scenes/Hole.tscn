@@ -1,5 +1,7 @@
 [gd_scene format=4 uid="uid://yrf780ptd3l8"]
 
+[ext_resource type="Script" uid="uid://bqr0b3xyma5au" path="res://Scripts/Hole.gd" id="1_4h5bc"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1chrj"]
 resource_name = "Hole"
 cull_mode = 2
@@ -47,6 +49,10 @@ data = PackedVector3Array(0.3999, 0.8134, -0.037699997, 0.371, 0.8134, -0.1074, 
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_ci2fe"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4h5bc"]
+height = 0.23156738
+radius = 0.1586914
+
 [node name="StaticBody3D_Hole" type="StaticBody3D" unique_id=642999257]
 
 [node name="Hole" type="MeshInstance3D" parent="." unique_id=1786625314]
@@ -67,3 +73,12 @@ mesh = SubResource("CylinderMesh_ci2fe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=77549746]
 transform = Transform3D(0.3122027, 0, 0, 0, 1, 0, 0, 0, 0.33393437, 2.859313, 5.7133703, 0)
 shape = SubResource("CylinderShape3D_ci2fe")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=2104666340]
+script = ExtResource("1_4h5bc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=765387730]
+transform = Transform3D(5.3, 0, 0, 0, 5.3, 0, 0, 0, 5.3, 1.1029973, 4.2840242, 0)
+shape = SubResource("CylinderShape3D_4h5bc")
+
+[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]

@@ -1,7 +1,7 @@
 extends RigidBody3D
 
 #var shootDir = Vector3(3, 0, randi()%4-2   )
-var shootDir = Vector3(-7, 0, 0 )
+var shootDir = Vector3(-1, 0, 0 )
 
 func _integrate_forces(state):	
 	sleeping = false
