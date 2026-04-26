@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7y6pxr4jynya"]
 
-[ext_resource type="Script" uid="uid://bufjd1k45feqv" path="res://Scripts/checkpoint.gd" id="1_wp6dl"]
+[ext_resource type="Script" uid="uid://bufjd1k45feqv" path="res://Scripts/Checkpoint.gd" id="1_wp6dl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wp6dl"]
 albedo_color = Color(1, 0, 0, 1)

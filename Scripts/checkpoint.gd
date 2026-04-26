@@ -20,17 +20,14 @@ func _enter_tree():
 	$Label3D.text = str(index)
 
 func set_type(type: type_enum):
+	$MeshInstance3D.hide()
+	$MeshInstance3D2.hide()
+	$MeshInstance3D3.hide()
 	if type == type_enum.DEFAULT:
 		$MeshInstance3D.show()
-		$MeshInstance3D2.hide()
-		$MeshInstance3D3.hide()
 	elif type == type_enum.BIG:
-		$MeshInstance3D.hide()
-		$MeshInstance3D2.show()
-		$MeshInstance3D3.hide()
+		$MeshInstance3D2.show()	
 	elif type == type_enum.BLUE:
-		$MeshInstance3D.hide()
-		$MeshInstance3D2.hide()
 		$MeshInstance3D3.show()
 		
 			
