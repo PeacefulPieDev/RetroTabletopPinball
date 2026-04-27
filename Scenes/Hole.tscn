@@ -55,6 +55,7 @@ radius = 0.1586914
 
 [node name="StaticBody3D_Hole" type="Node3D" unique_id=1669872329]
 script = ExtResource("1_4h5bc")
+points = null
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1288242483]
 
@@ -89,3 +90,5 @@ pixel_size = 0.07
 billboard = 1
 text = "##"
 outline_size = 14
+
+[connection signal="body_entered" from="StaticBody3D2/Area3D" to="." method="_on_body_entered"]

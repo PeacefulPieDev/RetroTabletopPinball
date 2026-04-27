@@ -21,7 +21,7 @@ script = ExtResource("1_afact")
 
 [node name="Checkpoint1" parent="Checkpoints" unique_id=704633063 instance=ExtResource("1_rs82y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.963288, 0.2, -29.748507)
-index = 3
+index = 1
 type = 1
 
 [node name="Checkpoint2" parent="Checkpoints" unique_id=101125373 instance=ExtResource("1_rs82y")]

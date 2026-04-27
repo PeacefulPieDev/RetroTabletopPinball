@@ -196,59 +196,59 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00921652, -0.105345316, 0)
 
 [node name="StaticBody3D_Hole" parent="Arena/Holes" unique_id=642999257 instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.587118, -5.1452765, -9.947341)
-bonus = 6
+points = 6
 
-[node name="StaticBody3D_Hole2" parent="Arena/Holes" unique_id=818433738 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole2" parent="Arena/Holes" unique_id=818433738 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6794815, -5.145277, -20.782352)
-bonus = 7
+points = 7
 
-[node name="StaticBody3D_Hole3" parent="Arena/Holes" unique_id=2015021486 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole3" parent="Arena/Holes" unique_id=2015021486 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.830259, -5.1452765, -15.376111)
-bonus = 9
+points = 9
 
-[node name="StaticBody3D_Hole4" parent="Arena/Holes" unique_id=24050796 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole4" parent="Arena/Holes" unique_id=24050796 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.44407, -5.145277, -25.267483)
-bonus = 5
+points = 5
 
-[node name="StaticBody3D_Hole5" parent="Arena/Holes" unique_id=807881585 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole5" parent="Arena/Holes" unique_id=807881585 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.461521, -5.145277, -19.862858)
-bonus = 10
+points = 10
 
-[node name="StaticBody3D_Hole6" parent="Arena/Holes" unique_id=1803773545 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole6" parent="Arena/Holes" unique_id=1803773545 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.227613, -5.1452765, -5.026226)
-bonus = 4
+points = 5
 
-[node name="StaticBody3D_Hole7" parent="Arena/Holes" unique_id=1834398404 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole7" parent="Arena/Holes" unique_id=1834398404 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.508442, -5.145277, -10.605242)
-bonus = 5
+points = 4
 
-[node name="StaticBody3D_Hole8" parent="Arena/Holes" unique_id=812528885 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole8" parent="Arena/Holes" unique_id=812528885 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.984097, -5.1452765, -4.989061)
-bonus = 3
+points = 3
 
-[node name="StaticBody3D_Hole9" parent="Arena/Holes" unique_id=379316319 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole9" parent="Arena/Holes" unique_id=379316319 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.320755, -5.145277, -5.131896)
-bonus = 1
+points = 1
 
-[node name="StaticBody3D_Hole10" parent="Arena/Holes" unique_id=458388961 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole10" parent="Arena/Holes" unique_id=458388961 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.192944, -5.145277, -12.672565)
-bonus = 4
+points = 4
 
-[node name="StaticBody3D_Hole11" parent="Arena/Holes" unique_id=975308411 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole11" parent="Arena/Holes" unique_id=975308411 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.28732, -5.145277, -17.327497)
-bonus = 3
+points = 2
 
-[node name="StaticBody3D_Hole12" parent="Arena/Holes" unique_id=699277462 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole12" parent="Arena/Holes" unique_id=699277462 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.93396, -5.1452756, -15.048919)
-bonus = 6
+points = 6
 
-[node name="StaticBody3D_Hole13" parent="Arena/Holes" unique_id=1743479067 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole13" parent="Arena/Holes" unique_id=1743479067 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.811127, -5.145276, -24.850353)
-bonus = 3
+points = 3
 
-[node name="StaticBody3D_Hole14" parent="Arena/Holes" unique_id=985555443 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole14" parent="Arena/Holes" unique_id=985555443 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.311012, -5.145276, -24.818493)
-bonus = 8
+points = 8
 
 [node name="Traps" type="Node3D" parent="Arena" unique_id=1063448014]
 visible = false
@@ -357,9 +357,10 @@ mesh = SubResource("PrismMesh_mcx6u")
 shape = SubResource("ConvexPolygonShape3D_mcx6u")
 
 [node name="RigidBody3D_Ball" type="RigidBody3D" parent="." unique_id=1452008035]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5754204, 1.3905697, -32.41986)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.952092, 2.0233707, -14.935453)
 mass = 0.3
 script = ExtResource("1_afqo3")
+metadata/_edit_group_ = true
 
 [node name="Ball" type="MeshInstance3D" parent="RigidBody3D_Ball" unique_id=1658570899]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
@@ -369,11 +370,9 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D_Ball" unique_id=43864175]
 shape = SubResource("SphereShape3D_q0ix6")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="RigidBody3D_Ball" unique_id=1696912392]
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=776965967]
 transform = Transform3D(-0.4947782, 0.8574502, 0.14132853, -0.16874507, -0.25433078, 0.95228195, 0.85247856, 0.44731984, 0.2705278, -29.383904, 19.116829, -3.0739403)
 sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(0.67559725, -0.56440395, 0.47435892, 0, 0.64339846, 0.76553136, -0.7372708, -0.51719093, 0.43467826, -8.730667, 25.44436, 4.2249894)
+transform = Transform3D(-0.48100224, -0.79907185, 0.3607223, 0, 0.41144565, 0.9114341, -0.8767192, 0.438402, -0.19790632, 0.08248949, 17.712332, -23.019009)
