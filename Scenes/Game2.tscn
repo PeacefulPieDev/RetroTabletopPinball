@@ -184,7 +184,6 @@ radius = 0.71109396
 [node name="Game2" type="Node3D" unique_id=827947733]
 
 [node name="Arena" type="Node3D" parent="." unique_id=2120506621]
-transform = Transform3D(0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Sprite3D2" type="Sprite3D" parent="Arena" unique_id=680453341]
 transform = Transform3D(-2.905304e-07, -6.797853, -1.668397e-08, 0, -2.971436e-07, 0.38168472, -6.646561, 2.971436e-07, 7.2927943e-16, -25.910242, 0.36597586, -14.396133)
@@ -194,7 +193,7 @@ texture = ExtResource("3_i2kc5")
 [node name="Holes" type="Node3D" parent="Arena" unique_id=423787100]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00921652, -0.105345316, 0)
 
-[node name="StaticBody3D_Hole" parent="Arena/Holes" unique_id=642999257 instance=ExtResource("1_whh81")]
+[node name="StaticBody3D_Hole" parent="Arena/Holes" unique_id=642999257 groups=["Holes"] instance=ExtResource("1_whh81")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.587118, -5.1452765, -9.947341)
 points = 6
 
@@ -357,7 +356,7 @@ mesh = SubResource("PrismMesh_mcx6u")
 shape = SubResource("ConvexPolygonShape3D_mcx6u")
 
 [node name="RigidBody3D_Ball" type="RigidBody3D" parent="." unique_id=1452008035]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.952092, 2.0233707, -14.935453)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.86164, 2.0233707, -29.891212)
 mass = 0.3
 script = ExtResource("1_afqo3")
 metadata/_edit_group_ = true
@@ -375,4 +374,4 @@ transform = Transform3D(-0.4947782, 0.8574502, 0.14132853, -0.16874507, -0.25433
 sky_mode = 1
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(-0.48100224, -0.79907185, 0.3607223, 0, 0.41144565, 0.9114341, -0.8767192, 0.438402, -0.19790632, 0.08248949, 17.712332, -23.019009)
+transform = Transform3D(2.1020558e-06, -0.93819124, 0.34611738, 0, 0.34611738, 0.93819124, -0.99999994, -1.9721301e-06, 7.2755796e-07, -5.781006, 50.161716, -15.699754)

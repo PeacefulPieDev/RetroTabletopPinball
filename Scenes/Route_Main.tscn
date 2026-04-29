@@ -64,6 +64,7 @@ index = 10
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.7149606, 0.2, -16.186577)
 index = 11
 type = 2
+skip_turn = true
 
 [node name="Checkpoint12" parent="Checkpoints" unique_id=667606994 instance=ExtResource("1_rs82y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6.8198853, 0.2, -14.216585)
@@ -314,6 +315,7 @@ index = 71
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -43.908035, 0.2, 0.72602177)
 index = 72
 type = 2
+skip_turn = true
 
 [node name="Checkpoint73" parent="Checkpoints" unique_id=1966577579 instance=ExtResource("1_rs82y")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -45.25437, 0.2, -0.5208106)
@@ -451,5 +453,4 @@ curve = SubResource("Curve3D_3lynq")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1015383484]
 transform = Transform3D(-2.905304e-07, -6.797853, -1.668397e-08, 0, -2.971436e-07, 0.38168472, -6.646561, 2.971436e-07, 7.2927943e-16, -25.910242, 0.36597586, -14.396133)
-visible = false
 texture = ExtResource("2_13db0")
