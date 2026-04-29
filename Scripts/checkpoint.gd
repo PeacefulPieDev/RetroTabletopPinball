@@ -14,12 +14,14 @@ enum type_enum { DEFAULT, BIG, BLUE }
 @export var type: type_enum = type_enum.DEFAULT:
 	set(value):
 		type = value
-		set_type(type)
+		update_type()
+
+@export var skip_turn: bool = false
 
 func _enter_tree():
 	$Label3D.text = str(index)
 
-func set_type(type: type_enum):
+func update_type():
 	$MeshInstance3D.hide()
 	$MeshInstance3D2.hide()
 	$MeshInstance3D3.hide()

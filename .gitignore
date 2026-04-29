@@ -18,3 +18,7 @@ mono_crash.*.json
 
 # Blender assets
 blender/
+
+# VS Code ignores
+.vscode/
+Pinball.code-workspace
