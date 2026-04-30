@@ -4,9 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://yrf780ptd3l8" path="res://Scenes/Hole.tscn" id="1_whh81"]
 [ext_resource type="Script" uid="uid://cswx2yw14x1rl" path="res://Scripts/Carousel.gd" id="2_q0ix6"]
 [ext_resource type="Texture2D" uid="uid://ldk402rgxrsg" path="res://il_1140xN.3624299077_gh0m – копія.png" id="3_i2kc5"]
-[ext_resource type="PackedScene" uid="uid://0vkxx8el7pwq" path="res://Scenes/Route_Main.tscn" id="4_3lynq"]
-[ext_resource type="PackedScene" uid="uid://bnod2pc5eumwv" path="res://Scenes/Route_Small_1.tscn" id="5_k5uwt"]
-[ext_resource type="PackedScene" uid="uid://c8eq5yqpu70ur" path="res://Scenes/Route_Small_2.tscn" id="6_mcx6u"]
+[ext_resource type="PackedScene" uid="uid://c53xume0tmcwo" path="res://Scenes/Routes.tscn" id="4_k5uwt"]
 [ext_resource type="Script" uid="uid://c7pa5c54khda0" path="res://Scripts/Marker.gd" id="7_d7370"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oid5k"]
@@ -336,18 +334,11 @@ transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -2, 0, 1, -8.742278e-08, 0, 0
 shape = SubResource("ConcavePolygonShape3D_i2kc5")
 metadata/_edit_lock_ = true
 
-[node name="Route_Main" parent="Arena" unique_id=103830244 instance=ExtResource("4_3lynq")]
+[node name="Routes" parent="Arena" unique_id=71434008 instance=ExtResource("4_k5uwt")]
 
-[node name="Route_Small" parent="Arena" unique_id=941360422 instance=ExtResource("5_k5uwt")]
-visible = false
-
-[node name="Route_Small_2" parent="Arena" unique_id=422216830 instance=ExtResource("6_mcx6u")]
-visible = false
-
-[node name="Marker" type="RigidBody3D" parent="Arena" unique_id=894893489 node_paths=PackedStringArray("route")]
+[node name="Marker" type="RigidBody3D" parent="Arena" unique_id=894893489]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.675543, 1.2681452, -29.693523)
 script = ExtResource("7_d7370")
-route = NodePath("../Route_Main")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arena/Marker" unique_id=6057363]
 mesh = SubResource("PrismMesh_mcx6u")

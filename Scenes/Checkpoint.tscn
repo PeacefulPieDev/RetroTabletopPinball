@@ -25,11 +25,18 @@ top_radius = 0.96
 bottom_radius = 1.0
 height = 0.1
 
+[sub_resource type="CylinderMesh" id="CylinderMesh_14q6d"]
+material = SubResource("StandardMaterial3D_i3j2t")
+top_radius = 0.46
+bottom_radius = 0.0
+height = 0.1
+
 [node name="Node3D" type="Node3D" unique_id=704633063]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 script = ExtResource("1_wp6dl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=864565152]
+visible = false
 mesh = SubResource("CylinderMesh_rvdls")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=239141689]
@@ -40,7 +47,10 @@ mesh = SubResource("CylinderMesh_wp6dl")
 visible = false
 mesh = SubResource("CylinderMesh_i3j2t")
 
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1123202925]
+mesh = SubResource("CylinderMesh_14q6d")
+
 [node name="Label3D" type="Label3D" parent="." unique_id=1734336704]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.10064407, 0)
 pixel_size = 0.02
-text = "##"
+text = "0"

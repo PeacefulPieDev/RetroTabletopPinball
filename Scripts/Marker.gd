@@ -6,7 +6,7 @@ extends RigidBody3D
 func _ready():
 	for hole in get_tree().get_nodes_in_group("Holes"):
 		hole.connect("hole_triggered", _on_hole_triggered)
-			
+
 func _on_hole_triggered(points: int):
 	print("[Marker] Points received: ", points)
 	var tween = create_tween()
