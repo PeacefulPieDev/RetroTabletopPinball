@@ -636,4 +636,5 @@ curve = SubResource("Curve3D_vb0xi")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264089762]
 transform = Transform3D(-2.905304e-07, -6.797853, -1.668397e-08, 0, -2.971436e-07, 0.38168472, -6.646561, 2.971436e-07, 7.2927943e-16, -25.91, 0, -14.396)
+visible = false
 texture = ExtResource("3_gb01t")

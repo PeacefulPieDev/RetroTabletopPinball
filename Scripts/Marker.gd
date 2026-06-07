@@ -11,10 +11,13 @@ func _ready():
 
 func _on_hole_triggered(points: int):
 	print("[Marker] Points received: ", points)
-	currentCheckpoint += 1
-	var tween = create_tween()
-	tween.tween_property(self, "position", route.getCheckpointByIndex(currentCheckpoint).position, 0.4)
-	tween.tween_callback(_on_movement_finished.bind(points - 1))
+	if  currentCheckpoint < 99:
+		currentCheckpoint += 1
+		var tween = create_tween()
+		tween.tween_property(self, "position", route.getCheckpointByIndex(currentCheckpoint).position, 0.4)
+		tween.tween_callback(_on_movement_finished.bind(points - 1))
+	else:
+		_on_movement_finished(0)
 
 func _input(event):
 	if event is InputEventKey and not event.pressed:
@@ -50,6 +53,8 @@ func _on_movement_finished(pointsLeft:int):
 	elif checkpoint.secondary_route:
 		route = checkpoint.secondary_route
 		currentCheckpoint = -1 # not 0 becuase secondary route doesn't include first checkpoint
+	elif checkpoint.index == 100:
+		print("[Checkpoint] Player won")
 
 #Cheat:
 func _on_button_button_up() -> void:

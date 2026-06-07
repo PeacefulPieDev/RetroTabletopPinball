@@ -379,6 +379,6 @@ layout_mode = 2
 text = "JUMP"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(2.1020558e-06, -0.93819124, 0.34611738, 0, 0.34611738, 0.93819124, -0.99999994, -1.9721301e-06, 7.2755796e-07, -5.781006, 50.161716, -15.699754)
+transform = Transform3D(0.6087633, -0.6706225, 0.42387798, 0, 0.53428745, 0.8453028, -0.7933519, -0.51458937, 0.32525465, -29.981535, 11.527638, -24.912184)
 
 [connection signal="button_up" from="CanvasLayer/HBoxContainer/Button" to="Arena/Marker" method="_on_button_button_up"]
