@@ -364,5 +364,21 @@ shape = SubResource("SphereShape3D_q0ix6")
 transform = Transform3D(-0.4947782, 0.8574502, 0.14132853, -0.16874507, -0.25433078, 0.95228195, 0.85247856, 0.44731984, 0.2705278, -29.383904, 19.116829, -3.0739403)
 sky_mode = 1
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=338038602]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer" unique_id=1364503752]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/HBoxContainer" unique_id=1996119067]
+layout_mode = 2
+max_length = 2
+
+[node name="Button" type="Button" parent="CanvasLayer/HBoxContainer" unique_id=1752510576]
+layout_mode = 2
+text = "JUMP"
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
 transform = Transform3D(2.1020558e-06, -0.93819124, 0.34611738, 0, 0.34611738, 0.93819124, -0.99999994, -1.9721301e-06, 7.2755796e-07, -5.781006, 50.161716, -15.699754)
+
+[connection signal="button_up" from="CanvasLayer/HBoxContainer/Button" to="Arena/Marker" method="_on_button_button_up"]
