@@ -22,3 +22,8 @@ blender/
 # VS Code ignores
 .vscode/
 Pinball.code-workspace
+
+*.apk
+*.apk*
+
+addons/

@@ -7,3 +7,7 @@ func _integrate_forces(state):
 	sleeping = false
 	if Input.is_key_pressed(KEY_SPACE):
 		state.apply_central_impulse(shootDir)
+
+func _input(event):
+	if event is InputEventScreenTouch and event.pressed:
+		apply_central_impulse(shootDir)

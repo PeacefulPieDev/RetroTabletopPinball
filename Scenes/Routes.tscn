@@ -19,7 +19,7 @@ albedo_color = Color(0.81690603, 0.69929045, 0.10687264, 1)
 
 [sub_resource type="Curve3D" id="Curve3D_wn3eo"]
 _data = {
-"points": PackedVector3Array(-7.908, 0, -0.787, 7.908, 0, 0.787, -18.479034, 0, -20.20465, 11.096, 0, -5.052, -11.096, 0, 5.052, -18.74892, -4.7683716e-07, -29.29045),
+"points": PackedVector3Array(-7.908, 0, -0.787, 7.908, 0, 0.787, -18.479034, 0, -20.20465, 11.096, 0, -5.052, -11.096, 0, 5.052, -18.637, 0, -30.225),
 "tilts": PackedFloat32Array(0, 0)
 }
 point_count = 2
@@ -376,7 +376,7 @@ index = 79
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -46.486805, 0.2, -10.781459)
 index = 80
 type = 1
-jump_checkpoint = NodePath("../Checkpoint100")
+jump_checkpoint = NodePath("../Checkpoint99")
 
 [node name="Checkpoint81" parent="Route_Main/Checkpoints" unique_id=1916281685 instance=ExtResource("2_f3pqi")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -44.790363, 0.2, -11.64041)
@@ -514,27 +514,27 @@ index = 3
 type = 3
 
 [node name="Checkpoint6" parent="Route_Small_Lower/Checkpoints" unique_id=259920172 instance=ExtResource("2_f3pqi")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.189718, 0.2, -27.534416)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.031847, 0.2, -28.044992)
 index = 3
 type = 3
 
 [node name="Checkpoint7" parent="Route_Small_Lower/Checkpoints" unique_id=1142477268 instance=ExtResource("2_f3pqi")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.842352, 0.2, -29.164371)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -11.723807, 0.2, -30.250858)
 index = 3
 type = 3
 
 [node name="Checkpoint8" parent="Route_Small_Lower/Checkpoints" unique_id=2035672500 instance=ExtResource("2_f3pqi")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.415274, 0.2, -30.44721)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -13.415274, 0.2, -31.415466)
 index = 3
 type = 3
 
 [node name="Checkpoint9" parent="Route_Small_Lower/Checkpoints" unique_id=2048300675 instance=ExtResource("2_f3pqi")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.420717, 0.2, -30.62944)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -15.420717, 0.2, -31.62479)
 index = 3
 type = 3
 
 [node name="Checkpoint10" parent="Route_Small_Lower/Checkpoints" unique_id=1197296415 node_paths=PackedStringArray("exit_checkpoint") instance=ExtResource("2_f3pqi")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17.092484, 0.2, -30.381485)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -17.092484, 0.2, -31.286867)
 index = 3
 type = 3
 exit_checkpoint = NodePath("../../../Route_Main/Checkpoints/Checkpoint43")
@@ -636,5 +636,4 @@ curve = SubResource("Curve3D_vb0xi")
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=1264089762]
 transform = Transform3D(-2.905304e-07, -6.797853, -1.668397e-08, 0, -2.971436e-07, 0.38168472, -6.646561, 2.971436e-07, 7.2927943e-16, -25.91, 0, -14.396)
-visible = false
 texture = ExtResource("3_gb01t")

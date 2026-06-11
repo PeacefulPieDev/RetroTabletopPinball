@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://ldk402rgxrsg" path="res://il_1140xN.3624299077_gh0m – копія.png" id="3_i2kc5"]
 [ext_resource type="PackedScene" uid="uid://c53xume0tmcwo" path="res://Scenes/Routes.tscn" id="4_k5uwt"]
 [ext_resource type="Script" uid="uid://c7pa5c54khda0" path="res://Scripts/Marker.gd" id="7_d7370"]
+[ext_resource type="PackedScene" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="7_mcx6u"]
+[ext_resource type="Script" uid="uid://crmwhufiv2nv0" path="res://Scripts/Camera.gd" id="8_d7370"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oid5k"]
 resource_name = "Trap"
@@ -378,7 +380,32 @@ max_length = 2
 layout_mode = 2
 text = "JUMP"
 
+[node name="Virtual Joystick" parent="CanvasLayer" unique_id=534401036 instance=ExtResource("7_mcx6u")]
+offset_left = 3.0
+offset_top = -300.0
+offset_right = 303.0
+offset_bottom = 0.0
+action_left = "camera_left"
+action_right = "camera_right"
+action_up = "camera_forward"
+action_down = "camera_backward"
+
+[node name="Virtual Joystick2" parent="CanvasLayer" unique_id=561607670 instance=ExtResource("7_mcx6u")]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 0
+action_left = "camera_lookleft"
+action_right = "camera_lookright"
+action_up = "camera_up"
+action_down = "camera_down"
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(0.6087633, -0.6706225, 0.42387798, 0, 0.53428745, 0.8453028, -0.7933519, -0.51458937, 0.32525465, -29.981535, 11.527638, -24.912184)
+transform = Transform3D(-0.9917835, 0.10376319, -0.07482433, -2.6633348e-08, 0.5848955, 0.8111088, 0.12792763, 0.80444425, -0.5800896, 0.65095615, 9.735382, -22.764645)
+script = ExtResource("8_d7370")
 
 [connection signal="button_up" from="CanvasLayer/HBoxContainer/Button" to="Arena/Marker" method="_on_button_button_up"]
