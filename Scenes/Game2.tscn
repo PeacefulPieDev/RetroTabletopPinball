@@ -183,6 +183,7 @@ radius = 0.71109396
 [node name="Game2" type="Node3D" unique_id=827947733]
 
 [node name="Arena" type="Node3D" parent="." unique_id=2120506621]
+transform = Transform3D(0.99811697, 0.06133754, 0, -0.06133754, 0.99811697, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Sprite3D2" type="Sprite3D" parent="Arena" unique_id=680453341]
 transform = Transform3D(-2.905304e-07, -6.797853, -1.668397e-08, 0, -2.971436e-07, 0.38168472, -6.646561, 2.971436e-07, 7.2927943e-16, -25.910242, 0.36597586, -14.396133)
@@ -347,18 +348,18 @@ mesh = SubResource("PrismMesh_mcx6u")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/Marker" unique_id=1319702870]
 shape = SubResource("ConvexPolygonShape3D_mcx6u")
 
-[node name="RigidBody3D_Ball" type="RigidBody3D" parent="." unique_id=1452008035]
+[node name="RigidBody3D_Ball" type="RigidBody3D" parent="Arena" unique_id=1452008035]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.86164, 2.0233707, -29.891212)
 mass = 0.3
 script = ExtResource("1_afqo3")
 metadata/_edit_group_ = true
 
-[node name="Ball" type="MeshInstance3D" parent="RigidBody3D_Ball" unique_id=1658570899]
+[node name="Ball" type="MeshInstance3D" parent="Arena/RigidBody3D_Ball" unique_id=1658570899]
 transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
 mesh = SubResource("SphereMesh_whh81")
-skeleton = NodePath("../..")
+skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D_Ball" unique_id=43864175]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/RigidBody3D_Ball" unique_id=43864175]
 shape = SubResource("SphereShape3D_q0ix6")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=776965967]
@@ -401,7 +402,7 @@ action_up = &"camera_forward"
 action_down = &"camera_backward"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(-0.9917835, 0.10376319, -0.07482433, -2.6633348e-08, 0.5848955, 0.8111088, 0.12792763, 0.80444425, -0.5800896, 0.65095615, 9.735382, -22.764645)
+transform = Transform3D(-0.017452113, -0.93624985, 0.35090134, 0, 0.3509548, 0.9363924, -0.9998477, 0.016342027, -0.0061249025, -5.944479, 40.619717, -14.516058)
 script = ExtResource("8_d7370")
 
 [connection signal="button_up" from="CanvasLayer/HBoxContainer/Button" to="Arena/Marker" method="_on_button_button_up"]
