@@ -57,7 +57,14 @@ func _on_movement_finished(pointsLeft:int):
 		print("[Checkpoint] Player won")
 
 #Cheat:
-func _on_button_button_up() -> void:
+func _on_button_button_up():
 	var target = int($"../../CanvasLayer/HBoxContainer/LineEdit".text)
 	currentCheckpoint = target - 1
 	position = $"../Routes".get_node("Route_Main").getCheckpointByIndex(currentCheckpoint).position
+
+func set_color(color:Color):
+	var new_mesh = get_node("MeshInstance3D")
+	if new_mesh:
+		var mat = StandardMaterial3D.new()
+		mat.albedo_color = color
+		new_mesh.material_override = mat

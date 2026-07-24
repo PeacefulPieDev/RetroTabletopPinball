@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://cct1xvewwiifm"]
 
+[ext_resource type="Script" uid="uid://curo7qjrf2ffw" path="res://Scripts/Game.gd" id="1_87gmd"]
 [ext_resource type="PackedScene" uid="uid://yrf780ptd3l8" path="res://Scenes/Hole.tscn" id="1_whh81"]
 [ext_resource type="Script" uid="uid://cswx2yw14x1rl" path="res://Scripts/Carousel.gd" id="2_q0ix6"]
 [ext_resource type="Texture2D" uid="uid://ldk402rgxrsg" path="res://il_1140xN.3624299077_gh0m – копія.png" id="3_i2kc5"]
@@ -175,6 +176,7 @@ material = SubResource("StandardMaterial3D_mcx6u")
 points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Game2" type="Node3D" unique_id=827947733]
+script = ExtResource("1_87gmd")
 
 [node name="Arena" type="Node3D" parent="." unique_id=2120506621]
 transform = Transform3D(0.99811697, 0.06133754, 0, -0.06133754, 0.99811697, 0, 0, 0, 1, 0, 0, 0)
@@ -369,6 +371,27 @@ max_length = 2
 layout_mode = 2
 text = "JUMP"
 
+[node name="VBoxContainer_Players" type="VBoxContainer" parent="CanvasLayer" unique_id=2000000001]
+offset_left = 7.0
+offset_top = 50.0
+offset_right = 130.0
+offset_bottom = 90.0
+
+[node name="HBoxContainer_Player" type="HBoxContainer" parent="CanvasLayer/VBoxContainer_Players" unique_id=1441767163]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/VBoxContainer_Players/HBoxContainer_Player" unique_id=1037200636]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button_Add" type="Button" parent="CanvasLayer/VBoxContainer_Players/HBoxContainer_Player" unique_id=1182515354]
+layout_mode = 2
+text = "+"
+
+[node name="Button_Remove" type="Button" parent="CanvasLayer/VBoxContainer_Players/HBoxContainer_Player" unique_id=1770716885]
+layout_mode = 2
+text = "-"
+
 [node name="VirtualJoystick" type="VirtualJoystick" parent="CanvasLayer" unique_id=625141769]
 offset_left = 34.0
 offset_top = 816.0
@@ -411,10 +434,12 @@ offset_bottom = 793.0
 text = "Shoot"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(-0.5948229, -0.46628147, 0.6548033, 0, 0.81457704, 0.5800554, -0.8038568, 0.34503025, -0.48452908, 0.5301943, 12.427723, -32.124447)
+transform = Transform3D(0.85716754, 0.4435635, -0.2617542, 0, 0.5082235, 0.8612254, 0.51503766, -0.73821443, 0.43563262, -6.0772476, 12.231499, -20.861454)
 script = ExtResource("8_d7370")
 
 [connection signal="button_up" from="CanvasLayer/HBoxContainer/Button" to="Arena/Marker" method="_on_button_button_up"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer_Players/HBoxContainer_Player/Button_Add" to="." method="_on_button_add_pressed"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer_Players/HBoxContainer_Player/Button_Remove" to="." method="_on_button_remove_pressed"]
 [connection signal="value_changed" from="CanvasLayer/VSlider" to="Arena/Cannon" method="_on_v_slider_value_changed"]
 [connection signal="value_changed" from="CanvasLayer/HSlider" to="Arena/Cannon" method="_on_h_slider_value_changed"]
 [connection signal="button_down" from="CanvasLayer/Button_Shoot" to="Arena/Cannon" method="_on_button_shoot_button_down"]

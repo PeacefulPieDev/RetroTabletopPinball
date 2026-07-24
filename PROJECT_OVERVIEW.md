@@ -38,6 +38,8 @@ Pinball/
     ├── Hole.gd.uid
     ├── Marker.gd          # Marker movement along route
     ├── Marker.gd.uid
+    ├── Game.gd            # Player management system
+    ├── Game.gd.uid
     ├── Route.gd           # Route management
     └── Route.gd.uid
 ```
@@ -104,6 +106,26 @@ Pinball/
 - **Methods:**
   - `getCheckpointByIndex(index: int) -> Node3D` - Returns checkpoint at specified index
 - **Structure:** Contains a `Checkpoints` child node with checkpoint instances
+
+### 7. Game (Game.gd)
+- **Type:** `Node3D`
+- **Purpose:** Player management system with UI and 3D markers
+- **Variables:**
+  - `players: Array` - List of player names (starts with "First")
+  - `player_panels: Array` - References to HBoxContainer_Player UI elements
+  - `player_markers: Array` - References to 3D Marker instances
+  - `colors: Array` - Color palette for player identification (Red, Yellow, Green, Blue, Purple)
+- **UI Management:**
+  - Creates HBoxContainer_Player panels for each player with ColorRect, Button_Add, and Button_Remove
+  - Panels are vertically stacked with 40px spacing
+  - Each ColorRect is colored based on player index from the colors array
+- **Marker Management:**
+  - Duplicates the base Marker (RigidBody3D) for each new player
+  - Assigns material color to each Marker's MeshInstance3D matching its ColorRect
+  - Removes markers when players are removed
+- **Controls:**
+  - Button_Add: Adds new player with panel and marker
+  - Button_Remove: Removes last player, panel, and marker (minimum 1 player)
 
 ## Scene Hierarchy
 
@@ -173,6 +195,14 @@ Pinball/
 3. Movement is animated with 0.4 second duration per checkpoint
 4. After movement completes, checks if current checkpoint has `skip_turn`
 
+### Player Management
+1. Each player has a UI panel (HBoxContainer_Player) and a 3D marker
+2. Players are identified by color (Red, Yellow, Green, Blue, Purple)
+3. Button_Add adds new player with panel and marker
+4. Button_Remove removes last player, panel, and marker (minimum 1 player)
+5. Player markers maintain index correspondence with player arrays
+6. Each player's marker material color matches their UI panel ColorRect
+
 ## Recent Development (Git History)
 
 ```
@@ -182,6 +212,17 @@ Pinball/
 a525409 - Draft implementation of marker movement alongside the path
 ba76df1 - Draft implementation of path and checkpoints
 ```
+
+## Latest Changes (Uncommitted)
+
+### Player Management System (Game.gd)
+- Added multi-player support with dynamic UI panel creation
+- Each player gets a colored HBoxContainer_Player panel with ColorRect
+- Each player gets a 3D Marker instance with matching color material
+- Button_Add creates new player, panel, and marker
+- Button_Remove removes last player, panel, and marker (minimum 1)
+- Color cycling: Red, Yellow, Green, Blue, Purple for player identification
+- Markers maintain index correspondence with player arrays
 
 ## Key Features in Development
 
