@@ -1,10 +1,11 @@
 [gd_scene format=4 uid="uid://cct1xvewwiifm"]
 
-[ext_resource type="Script" uid="uid://chsekeyctt2q0" path="res://Scripts/Ball.gd" id="1_afqo3"]
 [ext_resource type="PackedScene" uid="uid://yrf780ptd3l8" path="res://Scenes/Hole.tscn" id="1_whh81"]
 [ext_resource type="Script" uid="uid://cswx2yw14x1rl" path="res://Scripts/Carousel.gd" id="2_q0ix6"]
 [ext_resource type="Texture2D" uid="uid://ldk402rgxrsg" path="res://il_1140xN.3624299077_gh0m – копія.png" id="3_i2kc5"]
 [ext_resource type="PackedScene" uid="uid://c53xume0tmcwo" path="res://Scenes/Routes.tscn" id="4_k5uwt"]
+[ext_resource type="PackedScene" uid="uid://ktqgft2vo86g" path="res://Scenes/Ball.tscn" id="6_d7370"]
+[ext_resource type="PackedScene" uid="uid://b8k0ovhcwo6sn" path="res://Scenes/Cannon.tscn" id="7_87gmd"]
 [ext_resource type="Script" uid="uid://c7pa5c54khda0" path="res://Scripts/Marker.gd" id="7_d7370"]
 [ext_resource type="Script" uid="uid://crmwhufiv2nv0" path="res://Scripts/Camera.gd" id="8_d7370"]
 
@@ -172,13 +173,6 @@ material = SubResource("StandardMaterial3D_mcx6u")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mcx6u"]
 points = PackedVector3Array(0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="SphereMesh" id="SphereMesh_whh81"]
-radius = 0.2
-height = 0.4
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_q0ix6"]
-radius = 0.71109396
 
 [node name="Game2" type="Node3D" unique_id=827947733]
 
@@ -348,19 +342,13 @@ mesh = SubResource("PrismMesh_mcx6u")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/Marker" unique_id=1319702870]
 shape = SubResource("ConvexPolygonShape3D_mcx6u")
 
-[node name="RigidBody3D_Ball" type="RigidBody3D" parent="Arena" unique_id=1452008035]
+[node name="RigidBody3D_Ball" parent="Arena" unique_id=1386542848 instance=ExtResource("6_d7370")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.86164, 2.0233707, -29.891212)
-mass = 0.3
-script = ExtResource("1_afqo3")
-metadata/_edit_group_ = true
+collision_layer = 0
+collision_mask = 0
 
-[node name="Ball" type="MeshInstance3D" parent="Arena/RigidBody3D_Ball" unique_id=1658570899]
-transform = Transform3D(3.5, 0, 0, 0, 3.5, 0, 0, 0, 3.5, 0, 0, 0)
-mesh = SubResource("SphereMesh_whh81")
-skeleton = NodePath("../../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/RigidBody3D_Ball" unique_id=43864175]
-shape = SubResource("SphereShape3D_q0ix6")
+[node name="Cannon" parent="Arena" unique_id=444546296 instance=ExtResource("7_87gmd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.059055, 1.4444655, -29.568197)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=776965967]
 transform = Transform3D(-0.4947782, 0.8574502, 0.14132853, -0.16874507, -0.25433078, 0.95228195, 0.85247856, 0.44731984, 0.2705278, -29.383904, 19.116829, -3.0739403)
@@ -392,17 +380,41 @@ action_up = &"camera_up"
 action_down = &"camera_down"
 
 [node name="VirtualJoystick2" type="VirtualJoystick" parent="CanvasLayer" unique_id=1361836983]
-offset_left = 1528.0
-offset_top = 829.0
-offset_right = 1568.0
-offset_bottom = 869.0
+offset_left = 644.0
+offset_top = 810.0
+offset_right = 684.0
+offset_bottom = 850.0
 action_left = &"camera_left"
 action_right = &"camera_right"
 action_up = &"camera_forward"
 action_down = &"camera_backward"
 
+[node name="VSlider" type="VSlider" parent="CanvasLayer" unique_id=695115497]
+offset_left = 637.0
+offset_top = 230.0
+offset_right = 701.0
+offset_bottom = 660.0
+value = 60.0
+
+[node name="HSlider" type="HSlider" parent="CanvasLayer" unique_id=803527329]
+offset_left = 137.0
+offset_top = 769.0
+offset_right = 585.0
+offset_bottom = 886.0
+value = 50.0
+
+[node name="Button_Shoot" type="Button" parent="CanvasLayer" unique_id=507189000]
+offset_left = 300.0
+offset_top = 725.0
+offset_right = 421.0
+offset_bottom = 793.0
+text = "Shoot"
+
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(-0.017452113, -0.93624985, 0.35090134, 0, 0.3509548, 0.9363924, -0.9998477, 0.016342027, -0.0061249025, -5.944479, 40.619717, -14.516058)
+transform = Transform3D(-0.5948229, -0.46628147, 0.6548033, 0, 0.81457704, 0.5800554, -0.8038568, 0.34503025, -0.48452908, 0.5301943, 12.427723, -32.124447)
 script = ExtResource("8_d7370")
 
 [connection signal="button_up" from="CanvasLayer/HBoxContainer/Button" to="Arena/Marker" method="_on_button_button_up"]
+[connection signal="value_changed" from="CanvasLayer/VSlider" to="Arena/Cannon" method="_on_v_slider_value_changed"]
+[connection signal="value_changed" from="CanvasLayer/HSlider" to="Arena/Cannon" method="_on_h_slider_value_changed"]
+[connection signal="button_down" from="CanvasLayer/Button_Shoot" to="Arena/Cannon" method="_on_button_shoot_button_down"]
