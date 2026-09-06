@@ -5,7 +5,6 @@
 [ext_resource type="Script" uid="uid://cswx2yw14x1rl" path="res://Scripts/Carousel.gd" id="2_q0ix6"]
 [ext_resource type="Texture2D" uid="uid://ldk402rgxrsg" path="res://il_1140xN.3624299077_gh0m – копія.png" id="3_i2kc5"]
 [ext_resource type="PackedScene" uid="uid://c53xume0tmcwo" path="res://Scenes/Routes.tscn" id="4_k5uwt"]
-[ext_resource type="PackedScene" uid="uid://ktqgft2vo86g" path="res://Scenes/Ball.tscn" id="6_d7370"]
 [ext_resource type="PackedScene" uid="uid://b8k0ovhcwo6sn" path="res://Scenes/Cannon.tscn" id="7_87gmd"]
 [ext_resource type="Script" uid="uid://c7pa5c54khda0" path="res://Scripts/Marker.gd" id="7_d7370"]
 [ext_resource type="Script" uid="uid://crmwhufiv2nv0" path="res://Scripts/Camera.gd" id="8_d7370"]
@@ -344,10 +343,8 @@ mesh = SubResource("PrismMesh_mcx6u")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Arena/Marker" unique_id=1319702870]
 shape = SubResource("ConvexPolygonShape3D_mcx6u")
 
-[node name="RigidBody3D_Ball" parent="Arena" unique_id=1386542848 instance=ExtResource("6_d7370")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.86164, 2.0233707, -29.891212)
-collision_layer = 0
-collision_mask = 0
+[node name="CameraMarkerDummy" type="Node3D" parent="Arena/Marker" unique_id=838886470]
+transform = Transform3D(-0.8600079, -0.4709535, 0.19644216, -0.052850287, 0.4651053, 0.8836766, -0.5075367, 0.7495865, -0.42488414, 1.1958259, 5.379311, -2.5864487)
 
 [node name="Cannon" parent="Arena" unique_id=444546296 instance=ExtResource("7_87gmd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.059055, 1.4444655, -29.568197)
@@ -434,8 +431,10 @@ offset_bottom = 793.0
 text = "Shoot"
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1913686456]
-transform = Transform3D(0.85716754, 0.4435635, -0.2617542, 0, 0.5082235, 0.8612254, 0.51503766, -0.73821443, 0.43563262, -6.0772476, 12.231499, -20.861454)
+transform = Transform3D(-0.021815997, -0.8283947, 0.5597198, 0, 0.559853, 0.82859194, -0.999762, 0.01807656, -0.012213752, 3.9219704, 39.70105, -14.492731)
 script = ExtResource("8_d7370")
+
+[node name="CameraMainDummy" type="Node3D" parent="." unique_id=660265781]
 
 [connection signal="button_up" from="CanvasLayer/HBoxContainer/Button" to="Arena/Marker" method="_on_button_button_up"]
 [connection signal="button_up" from="CanvasLayer/VBoxContainer_Players/HBoxContainer_Player/Button_Add" to="." method="_on_button_add_pressed"]

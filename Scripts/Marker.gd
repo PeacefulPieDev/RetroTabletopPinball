@@ -4,13 +4,17 @@ class_name Marker
 
 @onready var route: Route = $"../Routes".get_node("Route_Main")
 @onready var currentCheckpoint: int = 0
+@onready var camera: Camera3D = $"../../Camera3D"
 
 func _ready():
 	for hole in get_tree().get_nodes_in_group("Holes"):
 		hole.connect("hole_triggered", _on_hole_triggered)
 
 func _on_hole_triggered(points: int):
+	camera.switch_camera_to($CameraMarkerDummy, start_movement.bind(points))
 	print("[Marker] Points received: ", points)
+
+func start_movement(points: int):
 	if  currentCheckpoint < 99:
 		currentCheckpoint += 1
 		var tween = create_tween()
@@ -34,6 +38,7 @@ func _input(event):
 			KEY_KP_9: _on_hole_triggered(9)
 
 func _on_movement_finished(pointsLeft:int):
+
 	var checkpoint = route.getCheckpointByIndex(currentCheckpoint) as Checkpoint
 
 	if checkpoint.exit_checkpoint:
@@ -55,6 +60,8 @@ func _on_movement_finished(pointsLeft:int):
 		currentCheckpoint = -1 # not 0 becuase secondary route doesn't include first checkpoint
 	elif checkpoint.index == 100:
 		print("[Checkpoint] Player won")
+
+	camera.swtich_camera_to_default(Callable())
 
 #Cheat:
 func _on_button_button_up():

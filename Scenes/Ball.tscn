@@ -9,6 +9,7 @@ radius = 0.71109396
 
 [node name="RigidBody3D_Ball" type="RigidBody3D" unique_id=1386542848]
 disable_mode = 2
+collision_layer = 3
 mass = 0.3
 metadata/_edit_group_ = true
 

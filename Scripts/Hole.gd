@@ -11,6 +11,5 @@ signal hole_triggered(points: int)
 		$StaticBody3D2/Label3D.text = str(points)
 
 func _on_body_entered(body: Node3D) -> void:
-	if body.name == "RigidBody3D_Ball":
-		print("[Hole] Ball in the hole! points: " + str(points))
-		emit_signal("hole_triggered", points)
+	print("[Hole] Ball in the hole! points: " + str(points))
+	emit_signal("hole_triggered", points)
